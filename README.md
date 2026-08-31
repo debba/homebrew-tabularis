@@ -1,59 +1,32 @@
 
 [![Discord](https://img.shields.io/discord/1502944695808950282?color=5865F2&logo=discord&logoColor=white)](https://discord.com/invite/K2hmhfHRSt)
 
-# Homebrew Tabularis
+# [ARCHIVED] Homebrew Tabularis
 
-Official Homebrew tap for [Tabularis](https://github.com/TabularisDB/tabularis) - A lightweight, developer-focused database management tool.
+> [!WARNING]
+> **DEPRECATED & ARCHIVED**  
+> Tabularis is now available as an official Homebrew Cask.    
+
+Former Homebrew tap for [Tabularis](https://github.com/TabularisDB/tabularis) - A lightweight, developer-focused database management tool.
 
 **Discord** - [Join our discord server](https://discord.com/invite/K2hmhfHRSt) and chat with the maintainers.
 
 ## Installation
 
 ```bash
-# Add this tap
-brew tap TabularisDB/tabularis
-
-# Install Tabularis
 brew install --cask tabularis
 ```
 
-## Updates
+## Migration (Existing Users)
 
-The Homebrew formula is **automatically updated daily** via GitHub Actions. The workflow:
-
-- Checks for new releases from `TabularisDB/tabularis`
-- Downloads the latest DMG files (both ARM64 and Intel architectures)
-- Calculates SHA256 checksums
-- Updates the formula automatically
-- Commits and pushes changes
-
-You can also trigger the update manually from the GitHub Actions tab.
-
-## Repository Structure
-
-```
-.
-├── Casks/
-│   └── tabularis.rb          # Homebrew Cask formula
-├── scripts/
-│   └── update-homebrew-formula.sh  # Update script (used by CI)
-├── .github/
-│   └── workflows/
-│       └── update-formula.yml    # Daily automated update workflow
-├── README.md
-└── LICENSE
-```
-
-## Manual Update
-
-If you need to manually update the formula:
+If you previously installed Tabularis using this tap, run these commands to switch to the official Homebrew cask:
 
 ```bash
-# Auto-detect latest version
-./scripts/update-homebrew-formula.sh
+# Remove the old custom tap reference
+brew untap TabularisDB/tabularis
 
-# Or specify a version
-./scripts/update-homebrew-formula.sh 0.9.0
+# Reinstall tabularis from homebrew casks
+brew install --cask tabularis
 ```
 
 ## Requirements
